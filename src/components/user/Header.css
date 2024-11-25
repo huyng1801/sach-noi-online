@@ -1,0 +1,144 @@
+/* Toàn bộ thanh header */
+.header-container {
+  display: flex;
+  justify-content: center; /* Đặt nội dung vào giữa thanh header */
+  background-color: #000; /* Màu nền đen */
+  padding: 10px 20px;
+  color: #fff;
+  width: 100%; /* Chiều rộng toàn bộ */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+/* Wrapper cho nội dung */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Giữa trái và phải */
+  align-items: center;
+  max-width: 1200px; /* Chiều rộng tối đa cho nội dung */
+  width: 100%; /* Chiều rộng nội dung theo kích thước màn hình */
+}
+
+/* Phần bên trái */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-title h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.header-title p {
+  font-size: 14px;
+  color: #e57373;
+  margin: 0;
+}
+
+/* Phần bên phải */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.header-right a:hover {
+  color: #e57373;
+}
+
+.header-icon {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.header-icon:hover {
+  color: #e57373;
+}
+/* Toàn bộ thanh header */
+.header-container {
+  display: flex;
+  justify-content: center; /* Đặt nội dung vào giữa thanh header */
+  background-color: #000; /* Màu nền đen */
+  padding: 10px 20px;
+  color: #fff;
+  width: 100%; /* Chiều rộng toàn bộ */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+/* Wrapper cho nội dung */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Giữa trái và phải */
+  align-items: center;
+  max-width: 1200px; /* Chiều rộng tối đa cho nội dung */
+  width: 100%; /* Chiều rộng nội dung theo kích thước màn hình */
+}
+
+/* Phần bên trái */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-title h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.header-title p {
+  font-size: 14px;
+  color: #e57373;
+  margin: 0;
+}
+
+/* Phần bên phải */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.header-right a:hover {
+  color: #e57373;
+}
+
+.header-icon {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.header-icon:hover {
+  color: #e57373;
+}
