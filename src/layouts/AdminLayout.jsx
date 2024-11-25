@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import { DashboardOutlined, UserOutlined, LogoutOutlined, PlusOutlined, BookOutlined } from '@ant-design/icons';
+import { DashboardOutlined, UserOutlined, LogoutOutlined, PlusOutlined, LoginOutlined } from '@ant-design/icons';
 
 
 const { Sider, Header, Content, Footer } = Layout;
@@ -15,7 +15,7 @@ const AdminLayout = ({ children }) => {
         </div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<DashboardOutlined />}>
-            <Link to="/admin/dashboard">Dashboard</Link>
+            <Link to="/admin/dashboard">Home</Link>
           </Menu.Item>
           <Menu.Item key="2" icon={<UserOutlined />}>
             <Link to="/users">Users</Link>
@@ -23,7 +23,10 @@ const AdminLayout = ({ children }) => {
           <Menu.Item key="3" icon={<PlusOutlined />}>
             <Link to="/admin/newbook">New book</Link>
           </Menu.Item>
-          <Menu.Item key="4" icon={<LogoutOutlined />}>
+          <Menu.Item key="4" icon={<LoginOutlined />}>
+            <Link to="/login">Login</Link>
+          </Menu.Item>
+          <Menu.Item key="5" icon={<LogoutOutlined />}>
             <Link to="/logout">Logout</Link>
           </Menu.Item>
         </Menu>
