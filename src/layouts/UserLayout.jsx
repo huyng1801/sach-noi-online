@@ -27,7 +27,7 @@ const UserLayout = ({ children }) => {
           </Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ padding: '50px 20px', background: '#fff' }}>
+      <Content style={{ padding: '50px 20px', background: '#C0C0C0' }}>
         {children}
       </Content>
       <Footer />
