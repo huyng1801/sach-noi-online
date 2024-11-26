@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import { SearchOutlined, BulbOutlined } from '@ant-design/icons';
 
 const Header = () => {
   return (
@@ -29,10 +29,10 @@ const Header = () => {
             <a href="#giongdoc">Giọng đọc</a>
           </div>
           <a href="#darkmode" className="header-icon">
-            <i className="fas fa-moon"></i>
+            <BulbOutlined />
           </a>
           <a href="#search" className="header-icon">
-            <i className="fas fa-search"></i>
+            <SearchOutlined />
           </a>
         </nav>
       </div>
