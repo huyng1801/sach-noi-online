@@ -1,0 +1,46 @@
+.story-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .story-card-image {
+    border-bottom: 1px solid #f0f0f0;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .story-card-title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+  }
+  
+  .story-card-category {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .story-card-meta {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 10px;
+  }
+  
