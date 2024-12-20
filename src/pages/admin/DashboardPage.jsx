@@ -1,451 +1,236 @@
-// import React from 'react';
-// import AdminLayout from '../../layouts/AdminLayout';
-// import { useNavigate } from 'react-router-dom';
-
-
-// const audiobooks = [
-//   {
-//     id: 1,
-//     title: "Hoa Tang Cho Ngày Cưới",
-//     genre: "truyện tâm lý xã hội",
-//     listenerCount: 2271,
-//     rating: 3.2,
-//     narrator: "MC Đình Duy",
-//     author: "Hoàng Phương Hùng",
-//     audioUrl: "/audio/hoatang.mp3",
-//   },
-//   {
-//     id: 2,
-//     title: "Sóng Gió Cuộc Đời",
-//     genre: "truyện tâm lý xã hội",
-//     listenerCount: 518,
-//     rating: 4.5,
-//     narrator: "MC Tiến Phong",
-//     author: "Nguyễn Văn A",
-//     audioUrl: "/audio/songgio.mp3",
-//   },
-//   {
-//     id: 3,
-//     title: "Nghề Coi Tù",
-//     genre: "truyện hình sự",
-//     listenerCount: 665,
-//     rating: 4.0,
-//     narrator: "MC Đình Duy",
-//     author: "Trần Thị Lan",
-//     audioUrl: "/audio/nghecoitu.mp3",
-//   },
-//   {
-//     id: 4,
-//     title: "Số Phận Cuộc Đời",
-//     genre: "truyện tâm lý xã hội",
-//     listenerCount: 698,
-//     rating: 3.8,
-//     narrator: "MC Nguyễn Huy",
-//     author: "Hoàng Mai",
-//     audioUrl: "/audio/sophancuocdoi.mp3",
-//   },
-//   {
-//     id: 5,
-//     title: "Những Đứa Con Bất Trị",
-//     genre: "truyện xã hội",
-//     listenerCount: 1600,
-//     rating: 4.1,
-//     narrator: "MC Trần Vân",
-//     author: "Lê Minh Tân",
-//     audioUrl: "/audio/nhungduaconbattri.mp3",
-//   },
-//   {
-//     id: 6,
-//     title: "Nuôi Con Người Khác",
-//     genre: "truyện tâm lý xã hội",
-//     listenerCount: 985,
-//     rating: 4.3,
-//     narrator: "MC Bảo Linh",
-//     author: "Phạm Thanh Hương",
-//     audioUrl: "/audio/nuoiconguoikhac.mp3",
-//   },
-//   {
-
-//     id: 7,
-//     title: "Bí Mật Quân Cờ",
-//     genre: "truyện trinh thám",
-//     listenerCount: 655,
-//     rating: 3.9,
-//     narrator: "MC Tiến Phong",
-//     author: "Trương Duy Anh",
-//     audioUrl: "/audio/bimatquanco.mp3",
-//   },
-//   {
-//     id: 8,
-//     title: "Mả Phát",
-//     genre: "truyện ma",
-//     listenerCount: 56,
-//     rating: 4.2,
-//     narrator: "MC Hồng Nhung",
-//     author: "Lê Quang Huy",
-//     audioUrl: "/audio/maphat.mp3",
-//   },
-//   {
-//     id: 9,
-//     title: "Người Đẻ Mướn",
-//     genre: "truyện xã hội",
-//     listenerCount: 750,
-//     rating: 3.5,
-//     narrator: "MC Anh Tú",
-//     author: "Nguyễn Hồng Sơn",
-//     audioUrl: "/audio/nguoidemuen.mp3",
-//   },
-//   {
-//     id: 10,
-//     title: "Cãi Nhau Với Vợ",
-//     genre: "truyện hài hước",
-//     listenerCount: 1200,
-//     rating: 4.0,
-//     narrator: "MC Nguyễn Huy",
-//     author: "Trần Quang Tuấn",
-//     audioUrl: "/audio/cainhauvoivo.mp3",
-//   },
-//   {
-//     id: 11,
-//     title: "Vụ Án Họ Trình",
-//     genre: "truyện hình sự",
-//     listenerCount: 1000,
-//     rating: 4.4,
-//     narrator: "MC Đình Soạn",
-//     author: "Vũ Đình Long",
-//     audioUrl: "/audio/vuanhotrinh.mp3",
-//   },
-//   {
-//     id: 12,
-//     title: "Nỗi Đau Thân Phận Đàn Bà",
-//     genre: "truyện tâm lý xã hội",
-//     listenerCount: 643,
-//     rating: 4.1,
-//     narrator: "MC Trần Vân",
-//     author: "Mai Thị Lan",
-//     audioUrl: "/audio/noidauthanphandanba.mp3",
-//   },
-//   {
-//     id: 13,
-//     title: "Yêu Kẻ Hoàn Lương",
-//     genre: "truyện tình cảm",
-//     listenerCount: 480,
-//     rating: 4.0,
-//     narrator: "MC Tiến Phong",
-//     author: "Nguyễn Duy Hoàng",
-//     audioUrl: "/audio/yeukehonluong.mp3",
-//   },
-//   {
-//     id: 14,
-//     title: "Chuyện Vui Thời Bao Cấp",
-//     genre: "truyện hài hước",
-//     listenerCount: 119,
-//     rating: 3.7,
-//     narrator: "MC Hồng Nhung",
-//     author: "Trương Minh Cường",
-//     audioUrl: "/audio/chuyenvuithoibaocap.mp3",
-//   },
-//   {
-//     id: 15,
-//     title: "Tráo Phận Đổi Tình",
-//     genre: "truyện tình cảm",
-//     listenerCount: 641,
-//     rating: 4.5,
-//     narrator: "MC Đình Duy",
-//     author: "Lê Thi Thanh",
-//     audioUrl: "/audio/traophandoitinh.mp3",
-//   },
-//   {
-//     id: 16,
-//     title: "Thuê Chồng",
-//     genre: "truyện tình cảm",
-//     listenerCount: 4200,
-//     rating: 4.6,
-//     narrator: "MC Anh Tú",
-//     author: "Nguyễn Phương Dung",
-//     audioUrl: "/audio/thuechong.mp3",
-//   },
-// ];
-
-
-
-// const DashboardPage = () => {
-//   const navigate = useNavigate();  // Khởi tạo navigate
-
-//   const handleEdit = (book) => {
-//     // Điều hướng người dùng đến trang chỉnh sửa sách (giả sử đường dẫn /admin/editbook/:id)
-//     // navigate(`./editbook/${book.id}`, { state: { book } });
-//     navigate(`/admin/book/editbook/${book}`, { state: { book } });
-
-//   };
-//   const onDelete = (id) => {
-//     // Xử lý logic xóa ở đây (ví dụ: xóa sách khỏi mảng audiobooks)
-//     console.log("Đang xóa sách có id:", id);
-
-    
-//   };
-//   return (
-//     <AdminLayout>
-      
-//       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-
-//        <div className="container mt-4">
-//         <h3 className="text-center mb-4">Truyện Audio Mới Nhất</h3>
-//         <div className="row">
-//           {audiobooks.map((book, index) => (
-//             <div key={index} className="col-md-4 mb-4">
-//               <div className="card">
-//                 <div className="card-body">
-//                   <h5 className="card-title">{book.title}</h5>
-//                   <p><strong>Thể Loại:</strong> {book.genre}</p>
-//                   <p><strong>Lượt nghe:</strong> {book.listenerCount}</p>
-//                   <p><strong>Giọng đọc:</strong> {book.narrator}</p>
-//                   <p><strong>Tác giả:</strong> {book.author}</p>
-//                   <audio controls>
-//                     <source src={book.audioUrl} type="audio/mp3" />
-//                     Your browser does not support the audio element.
-//                   </audio>
-//                   <button onClick={() => handleEdit(book.id)} className="btn btn-primary mt-2">
-//                     Sửa
-//                   </button>
-//                   <button onClick={() => onDelete(book.id)} className="btn btn-primary mt-2">
-//                     Xóa
-//                   </button>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-      
-//     </AdminLayout>
-//   );
-// };
-
-// export default DashboardPage;
-
-
-import React, { useState } from 'react';
-import AdminLayout from '../../layouts/AdminLayout';
-import { useNavigate } from 'react-router-dom';
-
-// Mảng sách nói
-const initialAudiobooks = [
-  {
-        id: 1,
-        title: "Hoa Tang Cho Ngày Cưới",
-        genre: "truyện tâm lý xã hội",
-        listenerCount: 2271,
-        rating: 3.2,
-        narrator: "MC Đình Duy",
-        author: "Hoàng Phương Hùng",
-        audioUrl: "/audio/hoatang.mp3",
-      },
-      {
-        id: 2,
-        title: "Sóng Gió Cuộc Đời",
-        genre: "truyện tâm lý xã hội",
-        listenerCount: 518,
-        rating: 4.5,
-        narrator: "MC Tiến Phong",
-        author: "Nguyễn Văn A",
-        audioUrl: "/audio/songgio.mp3",
-      },
-      {
-        id: 3,
-        title: "Nghề Coi Tù",
-        genre: "truyện hình sự",
-        listenerCount: 665,
-        rating: 4.0,
-        narrator: "MC Đình Duy",
-        author: "Trần Thị Lan",
-        audioUrl: "/audio/nghecoitu.mp3",
-      },
-      {
-        id: 4,
-        title: "Số Phận Cuộc Đời",
-        genre: "truyện tâm lý xã hội",
-        listenerCount: 698,
-        rating: 3.8,
-        narrator: "MC Nguyễn Huy",
-        author: "Hoàng Mai",
-        audioUrl: "/audio/sophancuocdoi.mp3",
-      },
-      {
-        id: 5,
-        title: "Những Đứa Con Bất Trị",
-        genre: "truyện xã hội",
-        listenerCount: 1600,
-        rating: 4.1,
-        narrator: "MC Trần Vân",
-        author: "Lê Minh Tân",
-        audioUrl: "/audio/nhungduaconbattri.mp3",
-      },
-      {
-        id: 6,
-        title: "Nuôi Con Người Khác",
-        genre: "truyện tâm lý xã hội",
-        listenerCount: 985,
-        rating: 4.3,
-        narrator: "MC Bảo Linh",
-        author: "Phạm Thanh Hương",
-        audioUrl: "/audio/nuoiconguoikhac.mp3",
-      },
-      {
-    
-        id: 7,
-        title: "Bí Mật Quân Cờ",
-        genre: "truyện trinh thám",
-        listenerCount: 655,
-        rating: 3.9,
-        narrator: "MC Tiến Phong",
-        author: "Trương Duy Anh",
-        audioUrl: "/audio/bimatquanco.mp3",
-      },
-      {
-        id: 8,
-        title: "Mả Phát",
-        genre: "truyện ma",
-        listenerCount: 56,
-        rating: 4.2,
-        narrator: "MC Hồng Nhung",
-        author: "Lê Quang Huy",
-        audioUrl: "/audio/maphat.mp3",
-      },
-      {
-        id: 9,
-        title: "Người Đẻ Mướn",
-        genre: "truyện xã hội",
-        listenerCount: 750,
-        rating: 3.5,
-        narrator: "MC Anh Tú",
-        author: "Nguyễn Hồng Sơn",
-        audioUrl: "/audio/nguoidemuen.mp3",
-      },
-      {
-        id: 10,
-        title: "Cãi Nhau Với Vợ",
-        genre: "truyện hài hước",
-        listenerCount: 1200,
-        rating: 4.0,
-        narrator: "MC Nguyễn Huy",
-        author: "Trần Quang Tuấn",
-        audioUrl: "/audio/cainhauvoivo.mp3",
-      },
-      {
-        id: 11,
-        title: "Vụ Án Họ Trình",
-        genre: "truyện hình sự",
-        listenerCount: 1000,
-        rating: 4.4,
-        narrator: "MC Đình Soạn",
-        author: "Vũ Đình Long",
-        audioUrl: "/audio/vuanhotrinh.mp3",
-      },
-      {
-        id: 12,
-        title: "Nỗi Đau Thân Phận Đàn Bà",
-        genre: "truyện tâm lý xã hội",
-        listenerCount: 643,
-        rating: 4.1,
-        narrator: "MC Trần Vân",
-        author: "Mai Thị Lan",
-        audioUrl: "/audio/noidauthanphandanba.mp3",
-      },
-      {
-        id: 13,
-        title: "Yêu Kẻ Hoàn Lương",
-        genre: "truyện tình cảm",
-        listenerCount: 480,
-        rating: 4.0,
-        narrator: "MC Tiến Phong",
-        author: "Nguyễn Duy Hoàng",
-        audioUrl: "/audio/yeukehonluong.mp3",
-      },
-      {
-        id: 14,
-        title: "Chuyện Vui Thời Bao Cấp",
-        genre: "truyện hài hước",
-        listenerCount: 119,
-        rating: 3.7,
-        narrator: "MC Hồng Nhung",
-        author: "Trương Minh Cường",
-        audioUrl: "/audio/chuyenvuithoibaocap.mp3",
-      },
-      {
-        id: 15,
-        title: "Tráo Phận Đổi Tình",
-        genre: "truyện tình cảm",
-        listenerCount: 641,
-        rating: 4.5,
-        narrator: "MC Đình Duy",
-        author: "Lê Thi Thanh",
-        audioUrl: "/audio/traophandoitinh.mp3",
-      },
-      {
-        id: 16,
-        title: "Thuê Chồng",
-        genre: "truyện tình cảm",
-        listenerCount: 4200,
-        rating: 4.6,
-        narrator: "MC Anh Tú",
-        author: "Nguyễn Phương Dung",
-        audioUrl: "/audio/thuechong.mp3",
-      },
-];
+import React from 'react';
+import { Card, Row, Col, Statistic, Table, Space } from 'antd';
+import { 
+  UserOutlined, 
+  BookOutlined, 
+  SoundOutlined, 
+  StarOutlined 
+} from '@ant-design/icons';
+import {
+  LineChart,
+  Line,
+  PieChart,
+  Pie,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer
+} from 'recharts';
+import AdminLayout from '../../components/admin/layout/AdminLayout';
 
 const DashboardPage = () => {
-  // Khởi tạo state cho audiobooks
-  const [audiobooks, setAudiobooks] = useState(initialAudiobooks);
-  const navigate = useNavigate();
-
-  // Xử lý việc chuyển đến trang chỉnh sửa
-  const handleEdit = (book) => {
-    navigate(`/admin/editbook/${book.id}`, { state: { book } });
+  // Dữ liệu giả lập - Trong ứng dụng thực, dữ liệu sẽ lấy từ API
+  const statistics = {
+    totalUsers: 15234,
+    totalStories: 856,
+    totalAudios: 2431,
+    averageRating: 4.7
   };
 
-  // Xử lý xóa sách
-  const onDelete = (id) => {
-    setAudiobooks(audiobooks.filter(book => book.id !== id));  // Lọc và cập nhật lại mảng audiobooks
-    console.log("Đã xóa sách có id:", id);
-  };
+  const listenerData = [
+    { date: '2023-11-01', listeners: 1200 },
+    { date: '2023-11-02', listeners: 1400 },
+    { date: '2023-11-03', listeners: 1600 },
+    { date: '2023-11-04', listeners: 1300 },
+    { date: '2023-11-05', listeners: 1800 }
+  ];
+
+  const categoryData = [
+    { category: 'Phiêu Lưu', value: 35 },
+    { category: 'Lãng Mạn', value: 25 },
+    { category: 'Kỳ Bí', value: 20 },
+    { category: 'Huyễn Tưởng', value: 20 }
+  ];
+
+  const recentStories = [
+    {
+      id: 1,
+      title: 'Cuộc Phiêu Lưu Vĩ Đại',
+      author: 'John Doe',
+      category: 'Phiêu Lưu',
+      duration: '1h 30m',
+      listeners: 1500,
+      rating: 4.8,
+      createdAt: '2023-12-01'
+    },
+    {
+      id: 2,
+      title: 'Kỳ Bí Giữa Đêm',
+      author: 'Jane Smith',
+      category: 'Kỳ Bí',
+      duration: '2h 15m',
+      listeners: 2100,
+      rating: 4.6,
+      createdAt: '2023-12-02'
+    }
+  ];
+
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+
+  const columns = [
+    {
+      title: 'Tiêu Đề',
+      dataIndex: 'title',
+      key: 'title',
+    },
+    {
+      title: 'Tác Giả',
+      dataIndex: 'author',
+      key: 'author',
+    },
+    {
+      title: 'Thể Loại',
+      dataIndex: 'category',
+      key: 'category',
+    },
+    {
+      title: 'Thời Gian',
+      dataIndex: 'duration',
+      key: 'duration',
+    },
+    {
+      title: 'Số Người Nghe',
+      dataIndex: 'listeners',
+      key: 'listeners',
+      sorter: (a, b) => a.listeners - b.listeners,
+    },
+    {
+      title: 'Đánh Giá',
+      dataIndex: 'rating',
+      key: 'rating',
+      render: (rating) => (
+        <Space>
+          <span>⭐</span>
+          <span>{rating.toFixed(1)}</span>
+        </Space>
+      ),
+    }
+  ];
+
+  const statsCards = [
+    {
+      title: 'Tổng Người Dùng',
+      value: statistics.totalUsers,
+      icon: <UserOutlined />,
+      color: '#1890ff'
+    },
+    {
+      title: 'Tổng Câu Chuyện',
+      value: statistics.totalStories,
+      icon: <BookOutlined />,
+      color: '#52c41a'
+    },
+    {
+      title: 'Tổng Audio',
+      value: statistics.totalAudios,
+      icon: <SoundOutlined />,
+      color: '#722ed1'
+    },
+    {
+      title: 'Đánh Giá Trung Bình',
+      value: statistics.averageRating,
+      icon: <StarOutlined />,
+      color: '#faad14',
+      precision: 1,
+      suffix: '/5'
+    }
+  ];
 
   return (
     <AdminLayout>
-      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+      <div style={{ padding: '24px' }}>
+        <h1 style={{ marginBottom: '24px', fontSize: '24px', fontWeight: 600 }}>
+          Tổng Quan Dashboard
+        </h1>
 
-      <div className="container mt-4">
-        <h3 className="text-center mb-4">Truyện Audio Mới Nhất</h3>
-        <div className="row">
-          {/* Lặp qua tất cả các sách và hiển thị thông tin */}
-          {audiobooks.map((book) => (
-            <div key={book.id} className="col-md-4 mb-4">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title">{book.title}</h5>
-                  <p><strong>Thể Loại:</strong> {book.genre}</p>
-                  <p><strong>Lượt nghe:</strong> {book.listenerCount}</p>
-                  <p><strong>Giọng đọc:</strong> {book.narrator}</p>
-                  <p><strong>Tác giả:</strong> {book.author}</p>
-
-                  {/* Audio player */}
-                  <audio controls>
-                    <source src={book.audioUrl} type="audio/mp3" />
-                    Your browser does not support the audio element.
-                  </audio>
-
-                  {/* Nút Sửa và Xóa */}
-                  <button onClick={() => handleEdit(book)} className="btn btn-primary mt-2">
-                    Sửa
-                  </button>
-                  <button onClick={() => onDelete(book.id)} className="btn btn-danger mt-2">
-                    Xóa
-                  </button>
-                </div>
-              </div>
-            </div>
+        {/* Phần thống kê */}
+        <Row gutter={[24, 24]} style={{ marginBottom: '24px' }}>
+          {statsCards.map((stat, index) => (
+            <Col xs={24} sm={12} lg={6} key={index}>
+              <Card>
+                <Statistic
+                  title={
+                    <span style={{ color: stat.color }}>
+                      {stat.icon} {stat.title}
+                    </span>
+                  }
+                  value={stat.value}
+                  precision={stat.precision}
+                  suffix={stat.suffix}
+                />
+              </Card>
+            </Col>
           ))}
-        </div>
+        </Row>
+
+        {/* Phần biểu đồ */}
+        <Row gutter={[24, 24]} style={{ marginBottom: '24px' }}>
+          <Col xs={24} lg={12}>
+            <Card title="Xu Hướng Người Nghe">
+              <ResponsiveContainer width="100%" height={350}>
+                <LineChart data={listenerData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="date" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Line
+                    type="monotone"
+                    dataKey="listeners"
+                    stroke="#8884d8"
+                    activeDot={{ r: 8 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </Card>
+          </Col>
+          <Col xs={24} lg={12}>
+            <Card title="Phân Bố Thể Loại">
+              <ResponsiveContainer width="100%" height={350}>
+                <PieChart>
+                  <Pie
+                    data={categoryData}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={true}
+                    outerRadius={130}
+                    fill="#8884d8"
+                    dataKey="value"
+                    nameKey="category"
+                    label={({ name, percent }) => 
+                      `${name} ${(percent * 100).toFixed(0)}%`
+                    }
+                  >
+                    {categoryData.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </Card>
+          </Col>
+        </Row>
+
+        {/* Bảng câu chuyện gần đây */}
+        <Card title="Câu Chuyện Gần Đây" style={{ marginTop: '24px' }}>
+          <Table
+            columns={columns}
+            dataSource={recentStories}
+            rowKey="id"
+            pagination={{
+              pageSize: 5,
+              showSizeChanger: false
+            }}
+          />
+        </Card>
       </div>
     </AdminLayout>
   );

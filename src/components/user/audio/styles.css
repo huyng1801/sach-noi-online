@@ -1,0 +1,54 @@
+.audio-player {
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .audio-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .audio-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .progress-slider {
+    flex: 1;
+  }
+  
+  .time-label {
+    font-family: monospace;
+    color: #666;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  /* Button hover effects */
+  .ant-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Active button state */
+  .ant-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Play button specific styles */
+  .ant-btn-primary.ant-btn-circle {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Tooltip customization */
+  .ant-tooltip {
+    font-size: 12px;
+  }

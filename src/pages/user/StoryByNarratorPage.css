@@ -1,0 +1,32 @@
+.story-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  .story-list-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+  
+  .story-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .story-list-header h2 {
+    margin: 0;
+    color: #1f1f1f;
+  }
+  
+  .story-count {
+    font-size: 16px;
+    color: #666;
+    background: #f5f5f5;
+    padding: 4px 12px;
+    border-radius: 16px;
+  }
